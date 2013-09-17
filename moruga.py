@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-import sys, getopt, os.path, os, re, yaml
+import sys, getopt, os.path, os, re
 
 from changetext import *
 
@@ -14,7 +14,7 @@ def util_fileexists(inputfile):
 
 def print_moruga_help():
    print ' moruga.py -m <mode> -i <inputfile> -o <outputfile>'
-   print '   where <mode> is one of: COPY,MAPPROXYGC'
+   print '   where <mode> is one of: COPY,MAPPROXYGC,WIKIXML2TW'
    return;
 
 
@@ -39,8 +39,8 @@ def processfilewithmode( fixmode, inputfile, outputfile ):
        functiontocall(inputfile, outputfile)
        print os.linesep, ' Done.'
      except:
-       #exc_type, exc_value, exc_traceback = sys.exc_info()
-       #print exc_type, exc_value, exc_traceback
+       exc_type, exc_value, exc_traceback = sys.exc_info()
+       print exc_type, exc_value, exc_traceback
        print os.linesep, ' Error 06 - Unable to find mode function '
        print_moruga_help()  
        sys.exit(6)       

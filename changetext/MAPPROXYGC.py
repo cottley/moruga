@@ -1,3 +1,5 @@
+import yaml
+
 def MAPPROXYGC(inputfilename, outputfilename):
    "Convert a GetCapabilities MapProxy-util dump to a MapProxy configuration"
   
