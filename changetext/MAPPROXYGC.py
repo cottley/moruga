@@ -115,7 +115,7 @@ def MAPPROXYGC(inputfilename, outputfilename):
        
      outputfile.write(str)
    except:
-     print os.linesep, ' Error MAPPROXY01 - Unable to process file as YAML '
+     print(os.linesep, ' Error MAPPROXY01 - Unable to process file as YAML ')
    inputfile.close()
    outputfile.close()
    return;
