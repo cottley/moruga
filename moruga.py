@@ -14,7 +14,7 @@ def util_fileexists(inputfile):
 
 def print_moruga_help():
    print(' moruga.py -m <mode> -i <inputfile> -o <outputfile>')
-   print('   where <mode> is one of: COPY,MAPPROXYGC,WIKIXML2TW')
+   print('   where <mode> is one of: COPY,MAPPROXYGC,WIKIXML2TW,C5LUM2LDIF,GCPSCOPEIPS')
    return;
 
 
@@ -50,7 +50,7 @@ def main(argv):
    inputfile = ''
    outputfile = ''
    changemode = ''
-   print (os.linesep, ' Moruga - Text manipulator - Version 0.3 - b20140609')
+   print (os.linesep, ' Moruga - Text manipulator - Version 0.4 - b20201012')
    print (' by Christopher Ottley')
    print (' ========================================')
    print (os.linesep)

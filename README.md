@@ -42,3 +42,26 @@ moruga.py -m WIKIXML2TW -i mediawiki.xml -o tiddlywikiimport.html
 ```
 
 This command also creates a .menu file with the name of the HTML file which can be used to modify the menu entry in the TiddlyWiki. In the above example the .menu file would be named tiddlywikiimport.html.menu.
+
+Mode C5LUM2LDIF
+---------------
+
+This mode converts extracted JSON user and group information from the Concrete5 based LazyUserMigrator into an LDIF file that can be imported into OpenLDAP.
+
+User ids and group ids are generated randomly. The administrator user, admin, is excluded and customization of the base DN would need to be done to match the base dn of the OpenLDAP server to be used.
+
+```
+moruga.py -m C5LUM2LDIF -i c5usergroups.json -o usergroups.ldif
+```
+
+Mode GCPSCOPEIPS
+----------------
+
+Google Cloud Platform provides a list of ip addresses (https://www.gstatic.com/ipranges/cloud.json) that indicate the IP address ranges for specific data centers.
+
+This mode allows the extraction of IP addresses for the us-central1 and outputs a text file with those IP address ranges. Download the cloud.json file (for example, using wget) and create the extract using the following command.
+
+```
+moruga.py -m GCPSCOPEIPS -i cloud.json -o uscentral1.csv
+```
+
